@@ -16,14 +16,23 @@ public class Main {
              Session session = sessionFactory.openSession()) {
 
             session.beginTransaction();
-            System.out.println("ok");
+
+            // create
             Course course = Course.builder()
-                    .id(1)
+                    .id(100)
                     .title("Java + Lombok")
                     .duration(3)
                     .build();
 
             session.save(course);
+
+            Course someCourse = session.get(Course.class, 1);
+            System.out.println(someCourse);
+            someCourse.setTitle("some another tiitle");
+
+            Course someCourseForDelete = session.get(Course.class, 2);
+            session.delete(someCourseForDelete);
+
             session.getTransaction().commit();
 
         }

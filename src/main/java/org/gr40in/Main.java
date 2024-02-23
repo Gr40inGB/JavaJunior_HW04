@@ -18,11 +18,12 @@ public class Main {
             session.beginTransaction();
 
             // create
-            Course course = Course.builder()
-                    .id(100)
-                    .title("Java + Lombok")
-                    .duration(3)
-                    .build();
+            Course course = new Course("Java + Lombok", 3);
+//            Course course = Course.builder()
+//                    .id(100)
+//                    .title("Java + Lombok")
+//                    .duration(3)
+//                    .build();
 
             session.save(course);
 

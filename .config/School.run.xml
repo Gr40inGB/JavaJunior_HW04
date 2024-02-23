@@ -23,7 +23,7 @@
         <option name="volumeBindings">
           <list>
             <DockerVolumeBindingImpl>
-              <option name="containerPath" value="/var/lib/postgresql/data " />
+              <option name="containerPath" value="/var/lib/postgresql/data" />
               <option name="hostPath" value="D:\HomeWork04\SchoolDB" />
             </DockerVolumeBindingImpl>
           </list>
